@@ -1,2 +1,2 @@
 # Receptar
-Projekt značkovací jazyky 2017, Gabriela Kopalová
+Značkovací jazyky 2017, zápočtový projekt, Gabriela Kopalová
