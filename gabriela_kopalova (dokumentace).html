@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="Autor" content="Gabriela Kopalová">
+    <title>Gabriela Kopalová - Dokumentace receptář</title>
+  </head>
+  <body>
+    <h1>Receptář</h1>
+    <nav>
+      <h2>Obsah:</h2>
+      <ul>
+        <li><a href="#uvod">Úvod</a></li>
+        <li><a href="#metodika">Metodika - Použité nástroje</a></li>
+        <li><a href="#popis">Popis elementů a atributů</a></li>
+        <li><a href="#transformace">Popis transformace</a></li>
+        <li><a href="#zaver">Závěr</a></li>
+      </ul>
+      <hr />
+    </nav>
+    <main>
+      <section id="uvod">
+        <article>
+          <header>
+            <h2>Úvod</h2>
+          </header>
+          <p>Téma semestrálního projektu, které jsem si vybrala, popisuje množné nastavení a přibližný obsah smyšlené aplikace, fungující jako jednoduchá kuchařka/receptář. Toto téma jsem si zvolila, protože mi přišlo zajímavé, a při hledání podobných aplikací jsem narazila jen na některé webové stránky fungující na podobném principu. Myslím si, že v současné době by takováto aplikace po realizaci určitě našla využití.</p>
+          <p>XML soubor slouží k obecné konfiguraci aplikace, ke konfiguraci práv uživatelů a přibližnému nastavení jednotlivých receptů.</p>
+        </article>
+      </section>
+      <br />
+      <section id="metodika">
+        <article>
+          <header>
+            <h2>Metodika</h2>
+          </header>
+          <h3>Využité programy</h3>
+          <p>Při tvorbě projektu jsem využila program <a href="https://www.sublimetext.com/">Sublime Text</a> a prohlížeč <a href="https://www.google.com/chrome/">Google Chrome</a>.</p>
+          <h3>Využité webové stránky</h3>
+          <p>Většinu dopňujících informací jsem si vyhledala na stránkách <a href="https://www.w3schools.com/">W3Schools</a> a při validaci jsem použila 
+            <a href="https://validator.w3.org/#validate_by_input"> validátor W3</a></p>
+        </article>
+      </section>
+      <br />
+      <section id="popis">
+        <article>
+          <header>
+            <h2>Popis elementů a atributů</h2>
+          </header>
+          <h3>Použité elementy</h3>
+          <table>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+              <th>Hodnoty</th>
+            </tr>
+            <tr>
+              <td>receptar</td>
+              <td>kořenový uzel pro celou aplikaci</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>zakladni-nastaveni</td>
+              <td>kořenový uzel pro základní nastavení</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>jazyk</td>
+              <td>v jakém jazyce bude aplikace psána</td>
+              <td>czech, english, german, russian</td>
+            </tr>
+            <tr>
+              <td>charset</td>
+              <td>v jakém charsetu bude parsován text</td>
+              <td>iso-8859-2, windows-1258, utf-8</td>
+            </tr>
+            <tr>
+              <td>javascript</td>
+              <td>zda v aplikaci bude povolen javascript</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>bez-stylu</td>
+              <td>zda v aplikaci bude povoleno přepnout do formátu bez stylu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>debug-mode</td>
+              <td>zda v aplikaci bude povolen debug-mode</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>maximalni-odezva</td>
+              <td>maximální doba odezvy aplikace</td>
+              <td>string omezení - max 3000ms</td>
+            </tr>
+            <tr>
+              <td>nastaveni-receptu</td>
+              <td>nastavení jednotlivých modulů, které mohou být součástí aplikace</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>zobrazovat</td>
+              <td>zda uživatel s tímto oprávněním má povolení k zobrazení aplikace</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>hodnoceni</td>
+              <td>zda uživatel s tímto oprávněním má povolení k hodnocení aplikace/receptu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>komentovat</td>
+              <td>zda uživatel s tímto oprávněním má povolení ke komentování aplikace/receptu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>upravit</td>
+              <td>zda uživatel s tímto oprávněním má povolení k úpravám receptu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>sdileni</td>
+              <td>zda uživatel s tímto oprávněním má povolení ke sdílení aplikace/receptu</td>
+              <td>0, 1 - facebook, twitter, email</td>
+            </tr>
+            <tr>
+              <td>todo-list</td>
+              <td>zda uživatel s tímto oprávněním má povolení k přidání receptu do svého seznamu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>pridat-novy</td>
+              <td>zda uživatel s tímto oprávněním má povolení k přidání nového receptu do databáze</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>mazani-vlastnich</td>
+              <td>zda uživatel s tímto oprávněním má povolení k mazání vlastních receptů,které vložil</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>mazani</td>
+              <td>zda uživatel s tímto oprávněním má povolení k mazání všech receptů</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>protokol</td>
+              <td>jaký bude použit protokol pro zobrazení aplikace</td>
+              <td>http, https</td>
+            </tr>
+            <tr>
+              <td>kontakt-spravce</td>
+              <td>nastavení emailu správce aplikace, kterému je v případě problémů možno napsat</td>
+              <td>regulární výraz ve schématu se stará o korektnost emailu</td>
+            </tr>
+            <tr>
+              <td>tabulka-prav</td>
+              <td>nastavení pravomocí uživatelů</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>osoba</td>
+              <td>identifikuje za pomoci atributu typ jednotlivé pravomoce</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>seznam-receptu</td>
+              <td>kořenový uzel pro seznam receptů</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>recept</td>
+              <td>identifikuje za pomoci atributu id jednotlivé recepty</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>nazev</td>
+              <td>určuje název receptu</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>kuchyne</td>
+              <td>určuje druh kuchyně</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>chod</td>
+              <td>určuje druh chodu</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>doba-pripravy</td>
+              <td>určuje dobu přípravy</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>suroviny</td>
+              <td>kořenový uzel pro suroviny</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>ingredience</td>
+              <td>určuje název použitých ingrediencí</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>postup</td>
+              <td>popisuje postup receptu</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>obrazek</td>
+              <td>určuje popis použitého obrázku</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>komentare</td>
+              <td>kořenový uzel pro komentáře</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>komentar</td>
+              <td>popisuje komentář od uživatélů</td>
+              <td>string omezení</td>
+            </tr>
+          </table>
+          <h3>Použité atributy</h3>
+          <table>
+            <tr>
+              <th>Název atributu</th>
+              <th>Popis atributu</th>
+              <th>Hodnoty</th>
+            </tr>
+            <tr>                       
+              <td>jednotka</td>
+              <td>určuje jednotku ve které je daný element uveden</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>                       
+              <td>typ</td>
+              <td>určuje typ daného oprávnění</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>domena</td>
+              <td>určuje doménu pomocí které může být aplikace/recept sdílen</td>
+              <td>string omezení - facebook, twitter, email</td>
+            </tr>
+            <tr>
+              <td>mnozstvi</td>
+              <td>určuje množství jednotky ingredience</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>odkaz</td>
+              <td>určuje odkaz ze kterého je čerpán daný obrázek</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>autor</td>
+              <td>určuje jméno autora receptu</td>
+              <td>string omezení - required</td>
+            </tr>
+            <tr>
+              <td>čas</td>
+              <td>určuje čas vložení receptu</td>
+              <td>time</td>
+            </tr>
+            <tr>
+              <td>datum</td>
+              <td>určuje datum vložení receptu</td>
+              <td>date</td>
+            </tr>
+            <tr>
+              <td>id</td>
+              <td>určuje identifikační číslo receptu</td>
+              <td>unsignedInt - required</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <br />
+      <section id="transformace">
+        <article>
+          <header>
+            <h2>Popis transformace</h2>
+          </header>
+          <p>V transformaci jsem předně chtěla vytvořit přibližný výpis nastavení a výpis tabulky uživatelských práv. Dále jsem chtěla vypsat jednotlivé recepty a jejich nastavení zobrazení. Pro lepší vzhled jsem použila css. Soubor XSL byl vytvořen v Sublime Text, k transformaci jsem využila <a href="http://www.freeformatter.com/xsl-transformer.html">Free formater</a>. Výstupný HTML není validní podle <a href="https://validator.w3.org/">Validator W3</a>. Využila jsem cyklů for-each a postupného procházení kořenových uzlů, nacházení jednotlivých tagu a aplikování na ně jejich vlastních šablon.</p>
+        </article>
+      </section>
+      <br />
+      <section id="zaver">
+        <article>
+          <header>
+            <h2>Závěr</h2>
+          </header>
+          <p>Při tvorbě této práce jsem si poprvé vyzkoušela práci s jazykem XML, který v budoucnu určitě využiji. Při větším rozsahu práce by bylo třeba udělat konkrétné omezení na všechny druhy elementů, aby byla aplikace správně zabezpečená.</p>
+        </article>
+      </section>
+      <br />
+    </main>
+    <footer>
+    <p>Autor: Gabriela Kopalová | zápočtový projekt Značkovací jazyky | Česká Zemědělská univerzita Praha, dne 18.4.2017</p>
+    </footer>
+  </body>
+</html>

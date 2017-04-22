@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="receptar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="zakladni-nastaveni">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="jazyk" type="xs:string" />
+              <xs:element name="charset" type="xs:string" />
+              <xs:element name="javascript" type="xs:boolean" />
+              <xs:element name="bez-stylu" type="xs:boolean" />
+              <xs:element name="debug-mode" type="xs:boolean" />
+              <xs:element name="maximalni-odezva">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedShort">
+                      <xs:attribute name="jednotka" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="nastaveni-receptu">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="zobrazovat" type="xs:boolean" />
+                    <xs:element name="hodnoceni" type="xs:boolean" />
+                    <xs:element name="komentovat" type="xs:boolean" />
+                    <xs:element name="upravit" type="xs:boolean" />
+                    <xs:element maxOccurs="unbounded" name="sdileni">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute name="domena" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="todo-list" type="xs:boolean" />
+                    <xs:element name="pridat-novy" type="xs:boolean" />
+                    <xs:element name="mazani-vlastnich" type="xs:boolean" />
+                    <xs:element name="mazani" type="xs:boolean" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="protokol" type="xs:string" />
+              <xs:element name="kontakt-spravce" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tabulka-prav">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="osoba">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="zobrazovat" type="xs:boolean" />
+                    <xs:element name="hodnoceni" type="xs:boolean" />
+                    <xs:element name="komentovat" type="xs:boolean" />
+                    <xs:element name="upravit" type="xs:boolean" />
+                    <xs:element maxOccurs="unbounded" name="sdileni">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:boolean">
+                            <xs:attribute name="domena" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="todo-list" type="xs:boolean" />
+                    <xs:element name="pridat-novy" type="xs:boolean" />
+                    <xs:element name="mazani-vlastnich" type="xs:boolean" />
+                    <xs:element name="mazani" type="xs:boolean" />
+                  </xs:sequence>
+                  <xs:attribute name="typ" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="seznam-receptu">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="recept">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nazev" type="xs:string" />
+                    <xs:element name="kuchyne" type="xs:string" />
+                    <xs:element name="chod" type="xs:string" />
+                    <xs:element name="doba-pripravy">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="jednotka" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="suroviny">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="ingredience">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="mnozstvi" type="xs:string" use="required" />
+                                  <xs:attribute name="jednotka" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="postup" type="xs:string" />
+                    <xs:element name="obrazek">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="odkaz" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="komentare">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="komentar">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="autor" type="xs:string" use="required" />
+                                  <xs:attribute name="cas" type="xs:time" use="required" />
+                                  <xs:attribute name="datum" type="xs:date" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:unsignedInt" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="jazyk">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="czech"/>
+      <xs:enumeration value="english"/>
+      <xs:enumeration value="german"/>
+      <xs:enumeration value="russian"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="charset">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="iso-8859-2"/>
+      <xs:enumeration value="windows-1258"/>
+      <xs:enumeration value="utf-8"/>
+    </xs:restriction>
+  </xs:simpleType> 
+  <xs:simpleType name="protokol">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="http"/>
+      <xs:enumeration value="https"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="kontakt-spravce">
+    <xs:restriction base="xs:string">
+       <xs:pattern value="[^@]+@[^\.]+\..+"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
