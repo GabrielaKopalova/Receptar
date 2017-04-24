@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="Autor" content="Gabriela Kopalová">
+    <title>Gabriela Kopalová - Dokumentace receptář</title>
+  </head>
+  <body>
+    <h1>Receptář</h1>
+    <nav>
+      <h2>Obsah:</h2>
+      <ul>
+        <li><a href="#uvod">Úvod</a></li>
+        <li><a href="#metodika">Metodika - Použité nástroje</a></li>
+        <li><a href="#popis">Popis elementů a atributů</a></li>
+        <li><a href="#transformace">Popis transformace</a></li>
+        <li><a href="#zaver">Závěr</a></li>
+      </ul>
+      <hr />
+    </nav>
+    <main>
+      <section id="uvod">
+        <article>
+          <header>
+            <h2>Úvod</h2>
+          </header>
+          <p>Téma semestrálního projektu, které jsem si vybrala, popisuje množné nastavení smyšlené aplikace, fungující jako jednoduchá kuchařka/receptář. Toto téma jsem si zvolila, protože mi přišlo zajímavé, a při hledání podobných aplikací jsem narazila jen na některé webové stránky fungující na podobném principu. Myslím si, že v současné době by takováto aplikace po realizaci určitě našla využití.</p>
+          <p>XML soubor slouží k obecné konfiguraci aplikace, ke konfiguraci práv uživatelů a přibližnému výpisu návštěvníků aplikace.</p>
+        </article>
+      </section>
+      <br />
+      <section id="metodika">
+        <article>
+          <header>
+            <h2>Metodika</h2>
+          </header>
+          <h3>Využité programy</h3>
+          <p>Při tvorbě projektu jsem využila program <a href="https://www.sublimetext.com/">Sublime Text</a> a prohlížeč <a href="https://www.google.com/chrome/">Google Chrome</a>.</p>
+          <h3>Využité webové stránky</h3>
+          <p>Většinu dopňujících informací jsem si vyhledala na stránkách <a href="https://www.w3schools.com/">W3Schools</a> a při validaci jsem použila 
+            <a href="https://validator.w3.org/#validate_by_input"> validátor W3</a></p>
+        </article>
+      </section>
+      <br />
+      <section id="popis">
+        <article>
+          <header>
+            <h2>Popis elementů a atributů</h2>
+          </header>
+          <h3>Použité elementy</h3>
+          <table>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+              <th>Hodnoty</th>
+            </tr>
+            <tr>
+              <td>receptar</td>
+              <td>kořenový uzel pro celou aplikaci</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>zakladni-nastaveni</td>
+              <td>kořenový uzel pro základní nastavení</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>jazyk</td>
+              <td>v jakém jazyce bude aplikace psána</td>
+              <td>czech, english, german, russian</td>
+            </tr>
+            <tr>
+              <td>charset</td>
+              <td>v jakém charsetu bude parsován text</td>
+              <td>iso-8859-2, windows-1258, utf-8</td>
+            </tr>
+            <tr>
+              <td>javascript</td>
+              <td>zda v aplikaci bude povolen javascript</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>bez-stylu</td>
+              <td>zda v aplikaci bude povoleno přepnout do formátu bez stylu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>debug-mode</td>
+              <td>zda v aplikaci bude povolen debug-mode</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>maximalni-odezva</td>
+              <td>maximální doba odezvy aplikace</td>
+              <td>unsignedByte omezení - max 3000ms</td>
+            </tr>
+            <tr>
+              <td>nastaveni-receptu</td>
+              <td>nastavení jednotlivých modulů, které mohou být součástí aplikace</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>vyhledavani</td>
+              <td>zda uživatel s tímto oprávněním má povolení k vyhledávání v aplikaci</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>hodnoceni</td>
+              <td>zda uživatel s tímto oprávněním má povolení k hodnocení aplikace/receptu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>komentovani</td>
+              <td>zda uživatel s tímto oprávněním má povolení ke komentování aplikace/receptu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>upravovani</td>
+              <td>zda uživatel s tímto oprávněním má povolení k úpravám receptu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>sdileni</td>
+              <td>zda uživatel s tímto oprávněním má povolení ke sdílení aplikace/receptu</td>
+              <td>0, 1 - facebook, twitter, email</td>
+            </tr>
+            <tr>
+              <td>ukladani</td>
+              <td>zda uživatel s tímto oprávněním má povolení k přidání receptu do svého seznamu</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>nahravani</td>
+              <td>zda uživatel s tímto oprávněním má povolení k nahrávání nového receptu/obrazku do databáze</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>mazani</td>
+              <td>zda uživatel s tímto oprávněním má povolení k obecnému mazání</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>protokol</td>
+              <td>jaký bude použit protokol pro zobrazení aplikace</td>
+              <td>http, https</td>
+            </tr>
+            <tr>
+              <td>kontakt-spravce</td>
+              <td>nastavení emailu správce aplikace, kterému je v případě problémů možno napsat</td>
+              <td>regulární výraz ve schématu se stará o korektnost emailu</td>
+            </tr>
+            <tr>
+              <td>obecny-vzhled</td>
+              <td>kořenový uzel pro obecný vzhled aplikace</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>velikost-pisma</td>
+              <td>kořenový uzel pro nastavení velikosti písma v aplikaci</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>bezny-text</td>
+              <td>určuje velikost běžného textu</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>nadpisy</td>
+              <td>určuje velikost nadpisů</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>texty-v-menu</td>
+              <td>určuje velikost textu v menu</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>okraje</td>
+              <td>kořenový uzel pro velikosti okrajů v aplikaci</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>nahore</td>
+              <td>určuje velikost okrajů zdola</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>dole</td>
+              <td>určuje velikost okrajů shora</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>vlevo</td>
+              <td>určuje velikost okrajů zleva</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>vpravo</td>
+              <td>určuje velikost okrajů zprava</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>obrazky</td>
+              <td>určuje za pomoci atributu formát typ obrázku</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>max-velikost</td>
+              <td>určuje maximální velikost obrázku</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>min-velikost</td>
+              <td>určuje minimální velikost obrázku</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>nastaveni-tlacitek</td>
+              <td>kořenový uzel pro nastavení tlačítek</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>velikost</td>
+              <td>kořenový uzel pro velikost tlačítek</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>vyska</td>
+              <td>určuje za pomoci atributu jednotka výšku obrázku</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>sirka</td>
+              <td>určuje za pomoci atributu jednotka šířku obrázku</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>velikost-popisu</td>
+              <td>určuje velikost písma na tlačítkách</td>
+              <td>unsignedByte omezení</td>
+            </tr>
+            <tr>
+              <td>barvy</td>
+              <td>identifikuje za pomoci atributu zapis-barev barevnost</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>barva-textu</td>
+              <td>určuje bazvu textu</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>barva-nadpisu</td>
+              <td>určuje bazvu nadpisů</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>barva-menu</td>
+              <td>určuje bazvu menu</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>barva-pozadi</td>
+              <td>určuje bazvu pozadí</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>tabulka-prav</td>
+              <td>nastavení pravomocí uživatelů</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>osoba</td>
+              <td>určuje za pomoci atributu typ jednotlivé pravomoce</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>zobrazovani</td>
+              <td>zda uživatel s tímto oprávněním má povolení k zobrazení aplikace</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>nahravani-receptu</td>
+              <td>zda uživatel s tímto oprávněním má povolení k přidání nového receptu do databáze</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>nahravani-obrazku</td>
+              <td>zda uživatel s tímto oprávněním má povolení k přidání nového obrázku do databáze</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>mazani-vlastnich</td>
+              <td>zda uživatel s tímto oprávněním má povolení k mazání vlastních receptů,které vložil</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>mazani-vsech</td>
+              <td>zda uživatel s tímto oprávněním má povolení k mazání všech receptů</td>
+              <td>0, 1</td>
+            </tr>
+            <tr>
+              <td>seznam-osob</td>
+              <td>kořenový uzel pro seznam osob</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>navstevnik</td>
+              <td>identifikuje za pomoci atributu id seznam návštěvníků</td>
+              <td>bez omezení</td>
+            </tr>
+            <tr>
+              <td>jmeno</td>
+              <td>určuje jméno návštěvníka</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>prijmeni</td>
+              <td>určuje příjmení návštěvníka</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>nickname</td>
+              <td>určuje přezdívku návštěvníka</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>kontakt</td>
+              <td>určuje druh chodu</td>
+              <td>regulární výraz ve schématu se stará o korektnost emailu</td>
+            </tr>
+            <tr>
+              <td>funkce</td>
+              <td>určuje funkci návštěvníka</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>posledni-aktivita</td>
+              <td>identifikuje za pomoci atributů datum a cas aktivitu návštěvníka</td>
+              <td>string omezení</td>
+            </tr>
+          </table>
+          <h3>Použité atributy</h3>
+          <table>
+            <tr>
+              <th>Název atributu</th>
+              <th>Popis atributu</th>
+              <th>Hodnoty</th>
+            </tr>
+            <tr>                       
+              <td>jednotka</td>
+              <td>určuje jednotku ve které je daný element uveden</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>                       
+              <td>typ</td>
+              <td>určuje typ daného oprávnění</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>domena</td>
+              <td>určuje doménu pomocí které může být aplikace/recept sdílen</td>
+              <td>string omezení - facebook, twitter, email</td>
+            </tr>
+            <tr>
+              <td>format</td>
+              <td>určuje formát v jakém jsou ukládány obrázky</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>zapis-barev</td>
+              <td>určuje typ zápisu barev</td>
+              <td>string omezení</td>
+            </tr>
+            <tr>
+              <td>čas</td>
+              <td>určuje čas akce v aplikaci</td>
+              <td>time</td>
+            </tr>
+            <tr>
+              <td>datum</td>
+              <td>určuje datum akce v aplikaci</td>
+              <td>date</td>
+            </tr>
+            <tr>
+              <td>id</td>
+              <td>určuje identifikační číslo návštěvníka</td>
+              <td>unsignedInt - required</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <br />
+      <section id="transformace">
+        <article>
+          <header>
+            <h2>Popis transformace</h2>
+          </header>
+          <p>V transformaci jsem předně chtěla vytvořit přibližný výpis nastavení a výpis tabulky uživatelských práv. Pro lepší vzhled jsem použila css. Soubor XSL byl vytvořen v Sublime Text, k transformaci jsem využila <a href="http://www.freeformatter.com/xsl-transformer.html">Free formater</a>. Výstupný HTML není validní podle <a href="https://validator.w3.org/">Validator W3</a>. Využila jsem cyklů for-each a postupného procházení kořenových uzlů, nacházení jednotlivých tagu a aplikování na ně jejich vlastních šablon.</p>
+        </article>
+      </section>
+      <br />
+      <section id="zaver">
+        <article>
+          <header>
+            <h2>Závěr</h2>
+          </header>
+          <p>Při tvorbě této práce jsem si poprvé vyzkoušela práci s jazykem XML, který v budoucnu určitě využiji. Při větším rozsahu práce by bylo třeba udělat konkrétné omezení na všechny druhy elementů, aby byla aplikace správně zabezpečená.</p>
+        </article>
+      </section>
+      <br />
+    </main>
+    <footer>
+    <p>Autor: Gabriela Kopalová | zápočtový projekt Značkovací jazyky | Česká Zemědělská univerzita Praha, dne 18.4.2017</p>
+    </footer>
+  </body>
+</html>
