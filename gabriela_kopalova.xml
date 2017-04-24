@@ -9,7 +9,7 @@
         <debug-mode>true</debug-mode>
         <maximalni-odezva jednotka="ms">3000</maximalni-odezva>
         <nastaveni-receptu>
-        	<vyhledavani>true</vyhledavani>
+  	    <vyhledavani>true</vyhledavani>
             <hodnoceni>true</hodnoceni>
             <komentovani>true</komentovani>
             <upravovani>true</upravovani>
