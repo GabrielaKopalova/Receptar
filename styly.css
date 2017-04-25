@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    margin: 2em;
+}
+
+
+h1{
+    color: #0000cc;
+    margin:1em;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+h2{
+    color: #000099;   
+    margin:1em;
+}
+
+
+h3{
+    color: #000066; 
+    margin:0.5em;
+}
+
+
+dt:before {
+    content: "";
+    display: block;
+}
+
+
+dt, dd {
+    display: inline;
+}
+
+
+dt#dt01, dd#dd01 {
+    display: block;
+}
+
+tr{
+    background-color: #ffffff;
+}
+
+
+table{
+    border-width: 0.2em;
+    background-color: #adddff;
+}
+
+
+table#t01 {  
+    background-color: #ffffff;
+    margin-left:2em;
+}
+
+
+table#t02 {  
+    background-color: #ffffff;
+}
+
+
+img{
+    width:23%;
+    height: auto; 
+    display: block;
+}
+
+
+.nastaveni-receptu{
+    color: black;
+    margin-left:3em;
+}
+
+
+.osoba{
+    color: black;
+    margin-left:4em;
+}
+
+
+.surovina{
+    color: black;
+    margin-left:4em;
+}
+
+
+.komentar{
+    color: black;
+    margin-left:4em;
+}

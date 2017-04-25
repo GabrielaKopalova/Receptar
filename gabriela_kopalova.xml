@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?> 
+    <?xml-stylesheet type="text/xsl" href="gabriela_kopalova.xsl"?>
+  <!-- github: https://github.com/GabrielaKopalova/Receptar -->
+<receptar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gabriela_kopalova.xsd">
+    <zakladni-nastaveni>
+        <jazyk>CZ</jazyk>
+        <charset>utf-8</charset>
+        <javascript>1</javascript>
+        <bez-stylu>1</bez-stylu>
+        <debug-mode>1</debug-mode>
+        <maximalni-odezva jednotka="ms">3000</maximalni-odezva>
+        <nastaveni-receptu>
+  	    <vyhledavani>1</vyhledavani>
+            <hodnoceni>1</hodnoceni>
+            <komentovani>1</komentovani>
+            <upravovani>1</upravovani>
+            <sdileni>1</sdileni>
+            <ukladani>1</ukladani>
+            <nahravani>1</nahravani>
+            <mazani>1</mazani>
+        </nastaveni-receptu>
+        <protokol>http</protokol>
+        <kontakt-spravce>sprava@receptar.cz</kontakt-spravce>
+    </zakladni-nastaveni>
+
+    <obecny-vzhled>
+		<velikost-pisma>
+			<bezny-text>12</bezny-text>
+			<nadpisy>20</nadpisy>
+            <texty-v-menu>16</texty-v-menu>
+		</velikost-pisma>
+		<okraje>
+			<nahore jednotka="px">150</nahore>
+			<dole jednotka="px">150</dole>
+			<vlevo jednotka="px">100</vlevo>
+			<vpravo jednotka="px">100</vpravo>
+		</okraje>
+		<obrazky format ="png">
+			<max-velikost>250</max-velikost>
+			<min-velikost>50</min-velikost>
+		</obrazky>
+    	<nastaveni-tlacitek>
+            <velikost>
+            	<vyska jednotka="px">25</vyska>
+            	<sirka jednotka="px">95</sirka>
+            </velikost>
+            <velikost-popisu>9</velikost-popisu>
+    	</nastaveni-tlacitek>
+    	<barvy zapis-barev="RGB">
+        	<barva-textu>černá</barva-textu>
+        	<barva-nadpisu>červená</barva-nadpisu>
+        	<barva-menu>béžová</barva-menu>
+        	<barva-pozadi>bílá</barva-pozadi>
+    	</barvy>
+	</obecny-vzhled>
+
+    <tabulka-prav>
+        <osoba typ="neprihlaseny">
+            <zobrazovani>1</zobrazovani>
+            <hodnoceni>0</hodnoceni>
+            <komentovani>0</komentovani>
+            <upravovani>0</upravovani>
+            <sdileni domena="twitter">1</sdileni>
+            <sdileni domena="facebook">1</sdileni>
+            <sdileni domena="email">1</sdileni>
+            <ukladani>0</ukladani>
+            <nahravani-receptu>0</nahravani-receptu>
+            <nahravani-obrazku>0</nahravani-obrazku>
+            <mazani-vlastnich>0</mazani-vlastnich>
+            <mazani-vsech>0</mazani-vsech>
+        </osoba>
+        <osoba typ="prihlaseny">
+            <zobrazovani>1</zobrazovani>
+            <hodnoceni>1</hodnoceni>
+            <komentovani>1</komentovani>
+            <upravovani>1</upravovani>
+            <sdileni domena="twitter">1</sdileni>
+            <sdileni domena="facebook">1</sdileni>
+            <sdileni domena="email">1</sdileni>
+            <ukladani>1</ukladani>
+            <nahravani-receptu>1</nahravani-receptu>
+            <nahravani-obrazku>1</nahravani-obrazku>
+            <mazani-vlastnich>1</mazani-vlastnich>
+            <mazani-vsech>0</mazani-vsech>
+        </osoba>
+        <osoba typ="administrator">
+            <zobrazovani>1</zobrazovani>
+            <hodnoceni>1</hodnoceni>
+            <komentovani>1</komentovani>
+            <upravovani>1</upravovani>
+            <sdileni domena="twitter">1</sdileni>
+            <sdileni domena="facebook">1</sdileni>
+            <sdileni domena="email">1</sdileni>
+            <ukladani>1</ukladani>
+            <nahravani-receptu>1</nahravani-receptu>
+            <nahravani-obrazku>1</nahravani-obrazku>
+            <mazani-vlastnich>1</mazani-vlastnich>
+            <mazani-vsech>1</mazani-vsech>
+        </osoba>
+    </tabulka-prav>
+
+    <seznam-osob>
+        <navstevnik id="1">
+            <jmeno>Rudolf</jmeno>
+            <prijmeni>Modrý</prijmeni>
+            <nickname>rumod</nickname>
+            <kontakt>rudolfmodry@seznam.cz</kontakt>
+            <funkce>Administrátor</funkce>
+            <posledni-aktivita cas="15:30:10" datum="2016-10-05">kontrola</posledni-aktivita>
+        </navstevnik>
+        <navstevnik id="2">
+            <jmeno>Adam</jmeno>
+            <prijmeni>První</prijmeni>
+            <nickname>madaadam</nickname>
+            <kontakt></kontakt>
+            <funkce>přihlášený</funkce>
+            <posledni-aktivita cas="01:00:10" datum="2017-02-23">smazání příspěvku</posledni-aktivita>
+        </navstevnik>
+        <navstevnik id="3">
+            <jmeno>Eva</jmeno>
+            <prijmeni>Fialová</prijmeni>
+            <nickname>fialka67</nickname>
+            <kontakt>fialovae@gmail.com</kontakt>
+            <funkce>přihlášený</funkce>
+            <posledni-aktivita cas="21:11:02" datum="2015-11-10">komentář</posledni-aktivita>
+        </navstevnik>
+        <navstevnik id="4">
+            <jmeno>návštěvník</jmeno>
+            <prijmeni></prijmeni>
+            <nickname></nickname>
+            <kontakt></kontakt>
+            <funkce>host</funkce>
+            <posledni-aktivita cas="05:45:08" datum="2016-07-21">ohodnocení</posledni-aktivita>
+        </navstevnik>
+        <navstevnik id="5">
+            <jmeno>návštěvník</jmeno>
+            <prijmeni></prijmeni>
+            <nickname></nickname>
+            <kontakt></kontakt>
+            <funkce>host</funkce>
+            <posledni-aktivita cas="09:12:33" datum="2017-03-08">prohlížení</posledni-aktivita>
+        </navstevnik>
+    </seznam-osob>
+</receptar>
